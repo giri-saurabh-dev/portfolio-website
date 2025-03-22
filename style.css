@@ -42,8 +42,8 @@ nav {
 }
 
 section {
-    padding: 80px 20px;
-    min-height: 100vh;
+    padding: 60px 20px;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,6 +93,32 @@ section {
     border-radius: 12px;
     font-size: 0.85rem;
     color: #495057;
+}
+
+.background {
+    background: #f8f9fa;
+}
+
+.background-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience {
+    margin: 30px 0;
+}
+
+.exp-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.exp-item h3 {
+    color: #007bff;
+    margin-bottom: 5px;
 }
 
 .project-grid {
