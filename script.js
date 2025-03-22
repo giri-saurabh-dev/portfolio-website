@@ -40,3 +40,18 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
+
+// Animate skill progress bars
+const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const progress = entry.target.querySelector('.skill-progress');
+            const level = entry.target.dataset.level;
+            progress.style.width = `${level}%`;
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.skill-card').forEach(card => {
+    skillObserver.observe(card);
+});
