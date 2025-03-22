@@ -143,6 +143,17 @@ section {
     color: var(--primary);
 }
 
+.cta-button.download {
+    background: #28a745;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cta-button.download:hover {
+    background: #218838;
+}
+
 .background-content {
     width: 100%;
     max-width: 1200px;
