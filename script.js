@@ -42,7 +42,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     const message = this.querySelector('textarea').value;
 
     if (email && message) {
-        alert('Message sent! (Demo only)');
+        alert('Message sent!');
         this.reset();
     } else {
         alert('Please fill in all fields');
@@ -84,12 +84,14 @@ document.querySelectorAll('.skill-card').forEach(card => {
         const skillTitle = card.querySelector('h4').textContent;
 
         const descriptions = {
-            'Network Security': 'Expertise in implementing and maintaining network security protocols, firewalls, and intrusion detection systems.',
-            'Penetration Testing': 'Experience in conducting security assessments and identifying vulnerabilities in systems and networks.',
-            'Cryptography': 'Knowledge of encryption algorithms, secure communication protocols, and key management systems.',
-            'Malware Analysis': 'Skilled in analyzing and reverse engineering malicious software to understand their behavior and impact.',
-            'SIEM Tools': 'Proficient in using Security Information and Event Management tools for threat detection and response.',
-            'Forensics': 'Experience in digital forensics, incident response, and evidence collection methodologies.'
+            'Network Config & Sec': 'Managing network security protocols, configuring network devices, and overseeing IDS/IPS systems',
+            'Penetration Testing': 'Performing security assessments and identifying vulnerabilities across systems and networks.',
+            'Security Framework': 'Understanding encryption algorithms, secure communication protocols, and key management. Proficient in ISO/IEC, NIST, GDPR, HIPAA security frameworks',
+            'Operating Systems': 'Installing, configuring, and troubleshooting various operating systems (Windows, Linux, macOS).',
+            'Troubleshoot': 'Skilled in diagnosing and resolving hardware and software issues within the network.',
+            'Forensics': 'Experienced in digital forensics, incident response, and root cause analysis (RCA).',
+            'Coding': 'Knowledgeable in multiple programming languages including Python, JavaScript, and C#.',
+            'Scripting': 'Experienced in writing and utilizing scripts for automation and tasks.'
         };
 
         modalTitle.textContent = skillTitle;
@@ -119,19 +121,20 @@ document.querySelectorAll('.exp-item').forEach(item => {
         const role = item.dataset.role;
 
         const descriptions = {
-            'Senior Developer': ['Led critical enterprise application development initiatives',
-                'Architected and implemented scalable solutions for enterprise clients',
-                'Mentored junior developers and conducted code reviews',
-                'Led agile development teams of 5-7 members',
-                'Implemented CI/CD pipelines and DevOps practices',
-                'Reduced system downtime by 35% through infrastructure improvements'],
+            'Security Analyst': ['Conducted comprehensive audits and assessments of security frameworks using industry standards and tools, achieving a 98% accuracy rate. ',
+                'Utilized collaboration with subject matter experts to compile and revise technical documentation, elevating completion efficiency by 30%.',
+                'Mentored junior analyst and conducted report reviews',
+                'Actively raise issues, provide feedback, and communicate with Security Research Analysts and Customer Operations Lead.',
+                'Employed proactive measures to deepen technical expertise in drafting security questionnaires and RFPs, staying current with the latest writing methods and technology trends in security and compliance.'],
 
-            'Full Stack Developer': ['Developed and maintained multiple client-facing web applications',
-                'Implemented responsive designs and enhanced UX across platforms',
-                'Optimized database queries resulting in 50% faster load times',
-                'Integrated third-party APIs and payment gateways',
-                'Collaborated with UX designers to implement new features',
-                'Improved application performance by 40% through code optimization']
+            'Customer and IT Support': ['Managed client relationships as the primary point of contact, successfully increasing client satisfaction over three months.',
+                'Provided technical support to over 30 clients within through phone, email, and in-person interactions.',
+                'Diagnosed and resolved hardware, software, and network issues, reducing downtime for clients and ensuring minimal disruption to their operations.',
+                'Conducted product demonstrations and training sessions for over 13 clients, resulting increase in product adoption rates within six months.'],
+
+            'Technical Support Intern': ['Coordinate with database administration and the IT department to ensure the smooth running of all software programs.',
+                    'Perform routine maintenance on computers and other equipment including running virus scans, cleaning up the memory, OS installation, and upgrading software and hardware as needed.',
+                    'Provided on-call assistance in fixing software and hardware problems to multiple branches of the company']
         };
 
         modalTitle.textContent = role;

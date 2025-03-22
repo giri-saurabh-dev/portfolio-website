@@ -57,7 +57,7 @@ nav {
 }
 
 section {
-    padding: 5rem 1rem;
+    padding: 0rem 1rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -160,7 +160,7 @@ section {
 }
 
 .experience {
-    display: grid;
+    display: inline;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     margin: 2rem 0;
@@ -180,11 +180,12 @@ section {
 }
 
 .skills {
-    display: grid;
+    display: inline-grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1.5rem;
+    gap: 5.5rem;
     margin-top: 2rem;
     width: 100%;
+    justify-content: space-around;
 }
 
 .skill-card {
@@ -265,6 +266,7 @@ section {
 
 #contact {
     background: var(--light);
+    width: inherit;
 }
 
 .contact-container {
@@ -466,6 +468,7 @@ footer {
     background: var(--dark);
     color: white;
     text-align: center;
+    width: 100%;
     padding: 2rem;
 }
 
@@ -489,4 +492,9 @@ footer {
     font-size: 1.5rem;
     padding: 0.5rem;
     cursor: pointer;
+}
+
+#res {
+    display: block;
+    justify-content: center;
 }
