@@ -1,4 +1,3 @@
-
 // Mobile menu toggle
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
@@ -28,7 +27,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
         const targetId = this.getAttribute('href');
         const targetSection = document.querySelector(targetId);
         const navHeight = document.querySelector('nav').offsetHeight;
-        
+
         window.scrollTo({
             top: targetSection.offsetTop - navHeight,
             behavior: 'smooth'
@@ -41,7 +40,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     const email = this.querySelector('input[type="email"]').value;
     const message = this.querySelector('textarea').value;
-    
+
     if (email && message) {
         alert('Message sent! (Demo only)');
         this.reset();
@@ -76,14 +75,14 @@ const skillObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.skill-card').forEach(card => {
     skillObserver.observe(card);
-    
+
     // Add click handler for skill cards
     card.addEventListener('click', () => {
         const modal = document.getElementById('skillModal');
         const modalTitle = document.getElementById('modalTitle');
         const modalDescription = document.getElementById('modalDescription');
         const skillTitle = card.querySelector('h4').textContent;
-        
+
         const descriptions = {
             'Network Security': 'Expertise in implementing and maintaining network security protocols, firewalls, and intrusion detection systems.',
             'Penetration Testing': 'Experience in conducting security assessments and identifying vulnerabilities in systems and networks.',
@@ -92,7 +91,7 @@ document.querySelectorAll('.skill-card').forEach(card => {
             'SIEM Tools': 'Proficient in using Security Information and Event Management tools for threat detection and response.',
             'Forensics': 'Experience in digital forensics, incident response, and evidence collection methodologies.'
         };
-        
+
         modalTitle.textContent = skillTitle;
         modalDescription.textContent = descriptions[skillTitle];
         modal.style.display = 'block';
@@ -110,3 +109,35 @@ window.addEventListener('click', (e) => {
         modal.style.display = 'none';
     }
 });
+
+// Background experience click handlers
+document.querySelectorAll('.exp-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const modal = document.getElementById('skillModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const role = item.dataset.role;
+
+        const descriptions = {
+            'Senior Developer': `As a Senior Developer at Tech Corp, I led critical enterprise application development initiatives. Key responsibilities included:
+            • Architecting and implementing scalable solutions for enterprise clients
+            • Mentoring junior developers and conducting code reviews
+            • Leading agile development teams of 5-7 members
+            • Implementing CI/CD pipelines and DevOps practices
+            • Reducing system downtime by 35% through infrastructure improvements`,
+
+            'Full Stack Developer': `Working at StartUp Inc allowed me to wear multiple hats and gain extensive full-stack experience:
+            • Developed and maintained multiple client-facing web applications
+            • Implemented responsive designs and enhanced UX across platforms
+            • Optimized database queries resulting in 50% faster load times
+            • Integrated third-party APIs and payment gateways
+            • Collaborated with UX designers to implement new features`
+        };
+
+        modalTitle.textContent = role;
+        modalDescription.textContent = descriptions[role];
+        modal.style.display = 'block';
+    });
+});
+
+// Close modal when clicking outside

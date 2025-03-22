@@ -172,6 +172,7 @@ section {
     border-radius: 8px;
     box-shadow: var(--shadow);
     transition: transform 0.3s;
+    cursor: pointer;
 }
 
 .exp-item:hover {
