@@ -6,24 +6,22 @@
 }
 
 :root {
-    --primary: #99BC85;
-    --secondary: #E4EFE7;
-    --dark: #64916D;
-    --light: #FAF1E6;
-    --extra-light: #FDFAF6;
-    --shadow: 0 2px 5px rgba(153,188,133,0.2);
+    --primary: #007bff;
+    --dark: #333;
+    --light: #f8f9fa;
+    --shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
-    color: #2f4858;
+    color: var(--dark);
 }
 
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #1b2a32;
+    color: var(--dark);
 }
 
 nav {
@@ -69,7 +67,7 @@ section {
 }
 
 .hero {
-    background: linear-gradient(135deg, var(--light) 0%, var(--secondary) 100%);
+    background: linear-gradient(135deg, var(--light) 0%, #e9ecef 100%);
     padding-top: 7rem;
 }
 
@@ -251,7 +249,6 @@ section {
     padding: 0.25rem 0.75rem;
     border-radius: 12px;
     font-size: 0.85rem;
-    color: #2f4858;
 }
 
 #contact {
@@ -272,9 +269,9 @@ section {
 
 .contact-info {
     padding: 2rem;
-    background: var(--dark);
+    background: var(--primary);
     border-radius: 10px;
-    color: var(--light);
+    color: white;
 }
 
 .contact-item {
