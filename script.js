@@ -76,4 +76,37 @@ const skillObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.skill-card').forEach(card => {
     skillObserver.observe(card);
+    
+    // Add click handler for skill cards
+    card.addEventListener('click', () => {
+        const modal = document.getElementById('skillModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDescription = document.getElementById('modalDescription');
+        const skillTitle = card.querySelector('h4').textContent;
+        
+        const descriptions = {
+            'Network Security': 'Expertise in implementing and maintaining network security protocols, firewalls, and intrusion detection systems.',
+            'Penetration Testing': 'Experience in conducting security assessments and identifying vulnerabilities in systems and networks.',
+            'Cryptography': 'Knowledge of encryption algorithms, secure communication protocols, and key management systems.',
+            'Malware Analysis': 'Skilled in analyzing and reverse engineering malicious software to understand their behavior and impact.',
+            'SIEM Tools': 'Proficient in using Security Information and Event Management tools for threat detection and response.',
+            'Forensics': 'Experience in digital forensics, incident response, and evidence collection methodologies.'
+        };
+        
+        modalTitle.textContent = skillTitle;
+        modalDescription.textContent = descriptions[skillTitle];
+        modal.style.display = 'block';
+    });
+});
+
+// Close modal functionality
+document.querySelector('.close-modal').addEventListener('click', () => {
+    document.getElementById('skillModal').style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+    const modal = document.getElementById('skillModal');
+    if (e.target === modal) {
+        modal.style.display = 'none';
+    }
 });
