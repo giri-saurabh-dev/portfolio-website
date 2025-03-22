@@ -17,13 +17,13 @@
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
-    color: var(--dark);
+    color: #2f4858;
 }
 
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: var(--dark);
+    color: #1b2a32;
 }
 
 nav {
@@ -251,6 +251,7 @@ section {
     padding: 0.25rem 0.75rem;
     border-radius: 12px;
     font-size: 0.85rem;
+    color: #2f4858;
 }
 
 #contact {
