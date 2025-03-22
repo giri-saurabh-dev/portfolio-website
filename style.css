@@ -404,6 +404,25 @@ button:hover i {
     color: #333;
 }
 
+#modalDescription ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+#modalDescription li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+#modalDescription li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
 
 @media (max-width: 768px) {
     .menu-toggle {

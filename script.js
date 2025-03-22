@@ -119,25 +119,23 @@ document.querySelectorAll('.exp-item').forEach(item => {
         const role = item.dataset.role;
 
         const descriptions = {
-            'Senior Developer': `Key responsibilities and achievements:
-• Led critical enterprise application development initiatives
-• Architected and implemented scalable solutions for enterprise clients
-• Mentored junior developers and conducted code reviews
-• Led agile development teams of 5-7 members
-• Implemented CI/CD pipelines and DevOps practices
-• Reduced system downtime by 35% through infrastructure improvements`,
+            'Senior Developer': ['Led critical enterprise application development initiatives',
+                'Architected and implemented scalable solutions for enterprise clients',
+                'Mentored junior developers and conducted code reviews',
+                'Led agile development teams of 5-7 members',
+                'Implemented CI/CD pipelines and DevOps practices',
+                'Reduced system downtime by 35% through infrastructure improvements'],
 
-            'Full Stack Developer': `Key responsibilities and achievements:
-• Developed and maintained multiple client-facing web applications
-• Implemented responsive designs and enhanced UX across platforms
-• Optimized database queries resulting in 50% faster load times
-• Integrated third-party APIs and payment gateways
-• Collaborated with UX designers to implement new features
-• Improved application performance by 40% through code optimization`
+            'Full Stack Developer': ['Developed and maintained multiple client-facing web applications',
+                'Implemented responsive designs and enhanced UX across platforms',
+                'Optimized database queries resulting in 50% faster load times',
+                'Integrated third-party APIs and payment gateways',
+                'Collaborated with UX designers to implement new features',
+                'Improved application performance by 40% through code optimization']
         };
 
         modalTitle.textContent = role;
-        modalDescription.textContent = descriptions[role];
+        modalDescription.innerHTML = '<ul>' + descriptions[role].map(item => `<li>${item}</li>`).join('') + '</ul>';
         modal.style.display = 'block';
     });
 });
