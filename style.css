@@ -6,10 +6,11 @@
 }
 
 :root {
-    --primary: #007bff;
-    --dark: #333;
-    --light: #f8f9fa;
-    --shadow: 0 2px 5px rgba(0,0,0,0.1);
+    --primary: #7A1CAC;
+    --secondary: #AD49E1;
+    --dark: #2E073F;
+    --light: #EBD3F8;
+    --shadow: 0 2px 5px rgba(46,7,63,0.2);
 }
 
 body {
@@ -67,7 +68,7 @@ section {
 }
 
 .hero {
-    background: linear-gradient(135deg, var(--light) 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, var(--light) 0%, #AD49E1 100%);
     padding-top: 7rem;
 }
 
@@ -269,9 +270,9 @@ section {
 
 .contact-info {
     padding: 2rem;
-    background: var(--primary);
+    background: var(--dark);
     border-radius: 10px;
-    color: white;
+    color: var(--light);
 }
 
 .contact-item {
