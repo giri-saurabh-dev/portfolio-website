@@ -55,21 +55,3 @@ const skillObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.skill-card').forEach(card => {
     skillObserver.observe(card);
 });
-
-// Random shape generator for hero image
-function generateRandomShape() {
-    const heroImage = document.querySelector('.hero-image img');
-    const shapes = [
-        'circle(50% at 50% 50%)',
-        'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
-        'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)',
-        'polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%)',
-        'polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)'
-    ];
-    
-    const randomShape = shapes[Math.floor(Math.random() * shapes.length)];
-    heroImage.style.clipPath = randomShape;
-}
-
-// Change shape every 5 seconds
-setInterval(generateRandomShape, 5000);

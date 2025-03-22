@@ -96,27 +96,8 @@ section {
 .hero-image img {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
     box-shadow: var(--shadow);
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    animation: morphShape 15s ease-in-out infinite;
-}
-
-@keyframes morphShape {
-    0% {
-        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    }
-    25% {
-        clip-path: circle(50% at 50% 50%);
-    }
-    50% {
-        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    }
-    75% {
-        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 50%, 0% 100%);
-    }
-    100% {
-        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    }
 }
 
 @media (max-width: 768px) {
