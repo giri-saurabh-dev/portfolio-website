@@ -229,6 +229,15 @@ section {
     transition: width 1s ease-in-out;
 }
 
+#projects {
+    min-height: 64vh;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .project-grid {
     width: 100%;
     max-width: 1200px;
@@ -494,8 +503,10 @@ footer {
     cursor: pointer;
 }
 
-#res {
-    display: block;
+.res {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
     justify-content: center;
 }
 
