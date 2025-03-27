@@ -255,6 +255,18 @@ section {
     transition: transform 0.3s;
 }
 
+.project-title {
+
+}
+
+ .project-desc {
+
+ }
+
+ .project-link {
+    
+ }
+
 .project:hover {
     transform: translateY(-5px);
 }
@@ -291,14 +303,14 @@ section {
 }
 
 .contact-info {
-    padding: 2rem;
+    padding: 1rem;
     background: var(--primary);
     border-radius: 10px;
     color: white;
 }
 
 .contact-item {
-    display: flex;
+    display: inline-block;
     align-items: center;
     margin-bottom: 1.5rem;
 }
@@ -598,7 +610,7 @@ footer {
     }
 
     .social-links {
-        flex-direction: column;
+        flex-direction: row;
         gap: 1rem;
     }
 }
