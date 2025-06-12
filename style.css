@@ -78,6 +78,7 @@ section {
     justify-content: space-between;
     gap: 2rem;
     padding: 0 2rem;
+    margin-top: 25px;
 }
 
 .hero-text {
