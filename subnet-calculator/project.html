@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IP Subnet Calculator</title>
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>IP Subnet Calculator</h1>
+    
+    <form id="subnet-form">
+      <label for="ip-input">IP Address (CIDR format):</label>
+      <input type="text" id="ip-input" placeholder="e.g. 192.168.1.1/24" required />
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="result" class="hidden">
+      <h2>Subnet Info</h2>
+      <ul>
+        <li><strong>Network Address:</strong> <span id="network-address"></span></li>
+        <li><strong>Broadcast Address:</strong> <span id="broadcast-address"></span></li>
+        <li><strong>First Usable IP:</strong> <span id="first-ip"></span></li>
+        <li><strong>Last Usable IP:</strong> <span id="last-ip"></span></li>
+        <li><strong>Total Usable Hosts:</strong> <span id="host-count"></span></li>
+        <li><strong>Subnet Mask:</strong> <span id="subnet-mask"></span></li>
+        <li><strong>Wildcard Mask:</strong> <span id="wildcard-mask"></span></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="project.js"></script>
+</body>
+</html>
