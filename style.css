@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
     line-height: 1.6;
     color: var(--dark);
 }
@@ -72,13 +72,12 @@ section {
 
 .hero-content {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 25px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
     padding: 0 2rem;
-    margin-top: 25px;
 }
 
 .hero-text {
@@ -120,7 +119,7 @@ section {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 2rem;
 }
 
@@ -578,7 +577,7 @@ footer {
 }
 
 .res {
-    margin: 10px;
+    margin: 30px;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -590,7 +589,7 @@ footer {
     .hero-content {
         flex-direction: column;
         text-align: center;
-        gap: 1rem;
+        gap: 5rem;
     }
 
     .hero-text {

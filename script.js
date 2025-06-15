@@ -23,17 +23,22 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // Smooth scrolling for navigation links
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
         const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        const navHeight = document.querySelector('nav').offsetHeight;
 
-        window.scrollTo({
-            top: targetSection.offsetTop - navHeight,
-            behavior: 'smooth'
-        });
+        // Only run smooth scroll if it's an in-page anchor (starts with #)
+        if (targetId.startsWith('#')) {
+            e.preventDefault();
+            const targetSection = document.querySelector(targetId);
+            const navHeight = document.querySelector('nav').offsetHeight;
+
+            window.scrollTo({
+                top: targetSection.offsetTop - navHeight,
+                behavior: 'smooth'
+            });
+        }
     });
 });
+
 
 // Form submission handling
 document.getElementById('contact-form').addEventListener('submit', function(e) {
