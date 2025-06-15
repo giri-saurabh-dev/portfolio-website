@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RII - SG - Portfolio</title>
+    <link rel="stylesheet" href="rouge.css">
+    <link rel="icon" type="image/x-icon" href="/asset/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Saurabh Giri</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/index.html#background">Background</a>
+            <a href="/index.html#projects">Projects</a>
+            <a href="/index.html#contact">Contact</a>
+        </div>
+    </nav>
+    <main class="container">
+        <h1>Rogue IP Detector</h1>
+        <p>Select your exported <strong>netstat output (.txt)</strong> to analyze connections.</p>
+        <div class="upload-area" id="uploadArea">
+            <label for="fileInput" class="upload-label">
+                <div class="upload-icon">📄</div>
+                <div class="upload-text">
+                    <strong>Click to upload</strong> or drag a <code>.txt</code> file here
+                </div>
+            </label>
+            <input type="file" id="fileInput" accept=".txt" />
+        </div>
+
+        <div id="loader" class="hidden">⏳ Loading legit IPs...</div>
+        <div id="output"></div>
+    </main>
+
+    <footer>
+    <p>© 2025 Saurabh Giri. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/_holy_smok3s_/"><i class="fab fa-instagram"></i></a> |
+      <a href="https://www.linkedin.com/in/saurabh-giri-ba172215b/"><i class="fab fa-linkedin"></i></a> |
+      <a href="https://x.com/holy_smok3s?s=20"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+    <script src="rouge.js"></script>
+</body>
+
+</html>
