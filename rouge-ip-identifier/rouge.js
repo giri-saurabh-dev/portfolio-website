@@ -82,12 +82,46 @@ function handleFileRead(event) {
       const isLegit = legitIPs.includes(ip);
       const rowClass = isLegit ? "safe" : "rogue";
 
-      tableRows.push(`
-        <tr class="${rowClass}">
+      // tableRows.push(`
+      //   <tr class="${rowClass}">
+      //     <td data-label="IP">${ip}</td>
+      //     <td data-label="Status">${isLegit ? "✅ Safe (Microsoft)" : "🚨 Unknown / Rogue"}</td>
+      //   </tr>
+      // `);
+      if (isLegit) {
+        tableRows.push(`
+          <tr class="${rowClass}">
+            <td data-label="IP">${ip}</td>
+            <td data-label="Status">✅ Safe (Microsoft)</td>
+          </tr>
+        `);
+      } else {
+        // Async fetch for rogue IP
+        const rowId = `ip-${ip.replace(/\./g, "-")}`;
+        tableRows.push(`
+          <tr class="${rowClass}" id="${rowId}">
           <td data-label="IP">${ip}</td>
-          <td data-label="Status">${isLegit ? "✅ Safe (Microsoft)" : "🚨 Unknown / Rogue"}</td>
-        </tr>
-      `);
+          <td data-label="Status">🚨 Rogue — fetching info...</td>
+          </tr>
+        `);
+
+        fetch(`https://ipinfo.io/${ip}/json`)
+          .then(res => res.json())
+          .then(data => {
+            const info = `${data.city || "?"}, ${data.region || "?"}, ${data.country || "?"} | ${data.org || "?"}`;
+            const row = document.getElementById(rowId);
+            if (row) {
+              row.children[1].innerText = `🚨 Rogue — ${info}`;
+            }
+          })
+          .catch(() => {
+            const row = document.getElementById(rowId);
+            if (row) {
+              row.children[1].innerText = `🚨 Rogue — info unavailable`;
+            }
+          });
+      }
+
     }
   });
 
