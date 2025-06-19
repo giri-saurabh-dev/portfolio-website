@@ -266,17 +266,9 @@ section {
 }
 
 
-.project-title {
-
+.project-title  h3 {
+    text-decoration: none;
 }
-
- .project-desc {
-
- }
-
- .project-link {
-    
- }
 
 .project:hover {
     transform: translateY(-5px);
