@@ -255,6 +255,15 @@ section {
     transition: transform 0.3s;
 }
 
+.project a{
+    text-decoration: none;
+    color: #333;
+}
+
+.project a:hover{
+    color: var(--primary);
+    transition: 0.3s;
+}
 
 
 .project-title {

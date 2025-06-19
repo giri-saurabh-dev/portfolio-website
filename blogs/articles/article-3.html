@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Saurabh's Articles</title>
+
+    <link rel="stylesheet" href="article.css">
+    <link rel="icon" type="image/x-icon" href="/asset/img/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Terminal command every dev should know">
+    <meta name="keywords"
+        content="Cybersecurity, Ethical Hacking, command, Penetration Testing, scripting, terminal, bash">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Articles</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/index.html#background">Background</a>
+            <a href="/index.html#projects">Projects</a>
+            <a href="/index.html#contact">Contact</a>
+            <a href="/blogs/blogs.html">Articles</a>
+
+        </div>
+    </nav>
+
+    <main class="container">
+        <img class="blog-image" src="/asset/blog-img/terminal.png" alt="IP Address Illustration" />
+        <!-- Blog Header -->
+        <section class="blog-section">
+            <h1>Terminal commands every Dev should know</h1>
+            <p><strong>Published:</strong> June 15, 2025</p>
+            <p>
+                <i>Master the command line and you master your workflow.</i> 
+            </p>
+        </section>
+        <section class="blog-section">
+            <h2>🧠 Why the Terminal Matters</h2>
+            <p>
+                Whether you're building websites, shipping APIs, or deploying apps — the terminal is your best friend. It’s not just for “hackers.” The command line is where:
+            </p>
+            <ol>
+                <li>Real automation happens</li>
+                <li>Debugging gets powerful</li>
+                <li>Speed and control live</li>
+            </ol>
+            <p>
+                Here are my go-to terminal commands every developer should know — beginner or pro.
+            </p>
+        </section>
+        <!-- Blog Footer -->
+        <section class="blog-section">
+            <h2>⚡ <code>cd</code>, <code>ls</code>, <code>pwd</code></h2>
+            <p>
+                Navigate like a ninja
+            </p>
+            <ol>
+                <li><code>cd project-folder/</code> – change into a directory</li>
+                <li><code>ls -la</code> – list all files (even hidden) with details</li>
+                <li><code>pwd</code> – show current working directory</li>
+            </ol>
+        </section>
+        <section class="blog-section">
+            <h2>🧹 <code>rm</code>, <code>mv</code>, <code>cp</code>, <code>mkdir</code>, <code>touch</code></h2>
+            <p>
+                Manage files quickly
+            </p>
+            <ol>
+                <li><code>rm -rf folder/</code> – delete folder and contents ⚠️</li>
+                <li><code>mv old.js new.js</code> – rename or move files</li>
+                <li><code>cp index.html backup.html</code> – copy files</li>
+                <li><code>mkdir assets</code> – creates directory</li>
+                <li><code>touch README.md</code> – create an empty file</li>
+            </ol>
+        </section>
+
+        <section class="blog-section">
+            <h2>🔍 <code>grep</code>, <code>find</code>, <code>cat</code>, <code>less</code></h2>
+            <p>
+                Search like Sherlock
+            </p>
+            <ol>
+                <li><code>grep "function" main.js</code> – find text in files</li>
+                <li><code>find . -name "*.js"</code> – find all JS files</li>
+                <li><code>cat filename</code> – print file contents</li>
+                <li><code>less filename</code> – scrollable version of <code>cat</code></li>
+            </ol>
+        </section>
+
+        <section class="blog-section">
+            <h2>💡 <code>top</code>, <code>htop</code>, <code>ps</code>, <code>kill</code></h2>
+            <p>
+                Monitor and manage processes
+            </p>
+            <ol>
+                <li><code>top</code> – show running processes</li>
+                <li><code>htop</code> - a friendlier version (install it!)</li>
+                <li><code>ps aux</code> – list all processes</li>
+                <li><code>kill -9 1234</code> - kill process by PID</li>
+            </ol>
+        </section>
+
+        <section class="blog-section">
+            <h2>🌍 <code>curl</code>, <code>ping</code>, <code>whois</code>, <code>dig</code></h2>
+            <p>
+                Interact with the network
+            </p>
+            <ol>
+                <li><code>curl https://api.github.com</code> – make HTTP requests</li>
+                <li><code>ping google.com</code> - test internet connectivity</li>
+                <li><code>whois domain.com</code> – find domain information</li>
+                <li><code>dig github.com</code> - DNS lookup</li>
+            </ol>
+        </section>
+
+        <section class="blog-section">
+            <h2>⚙️ <code>chmod</code>, <code>chown</code></h2>
+            <p>
+                Permissions and ownership
+            </p>
+            <ol>
+                <li><code>chmod +x script.sh</code> – make a file executable</li>
+                <li><code>chown user:group file.txt</code> - change file ownership</li>
+            </ol>
+        </section>
+
+        <section class="blog-section">
+            <h2>📦 <code>git</code></h2>
+            <p>
+                Version control life saver
+            </p>
+            <ol>
+                <li><code>git init</code> <code>git status</code> <code>git commit -m "msg"</code></li>
+                <li><code>git log --oneline</code> - clean log view</li>
+                <li><code>git diff</code> - see what’s changed</li>
+            </ol>
+        </section>
+
+        <section class="blog-section">
+            <h2>🧪 Bonus Tools I Love</h2>
+            <ol>
+                <li><code>alias</code> – create custom command</li>
+                <li><code>history | grep clone</code> - find old commands</li>
+                <li><code>clear</code> - clear the terminal</li>
+                <li><code>ctrl + r</code> - reverse search your command history 🔥</li>
+            </ol>
+        </section>
+
+        <section class="blog-section">
+            <h2>🏁 Final Thoughts</h2>
+            <p>
+                Knowing terminal commands:
+            </p>
+            <ol>
+                <li>Saves time</li>
+                <li>Makes you more resourceful</li>
+                <li>It’s like having superpowers… but for your keyboard.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Saurabh Giri. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/_holy_smok3s_/"><i class="fab fa-instagram"></i></a> |
+            <a href="https://www.linkedin.com/in/saurabh-giri-ba172215b/"><i class="fab fa-linkedin"></i></a> |
+            <a href="https://x.com/holy_smok3s?s=20"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script src="rouge.js"></script>
+</body>
+
+</html>

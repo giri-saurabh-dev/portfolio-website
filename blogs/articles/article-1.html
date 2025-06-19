@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Saurabh's Articles</title>
+
+    <link rel="stylesheet" href="article.css">
+    <link rel="icon" type="image/x-icon" href="/asset/img/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Introduction to networking and network security">
+    <meta name="keywords"
+        content="Cybersecurity, Ethical Hacking, netstat, wireshark, networking, network, security, network security">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Articles</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/index.html#background">Background</a>
+            <a href="/index.html#projects">Projects</a>
+            <a href="/index.html#contact">Contact</a>
+            <a href="/blogs/blogs.html">Articles</a>
+
+        </div>
+    </nav>
+
+    <main class="container">
+        <img class="blog-image" src="/asset/blog-img/intro-sec.jpg" alt="IP Address Illustration" />
+        <!-- Blog Header -->
+        <section class="blog-section">
+            <h1>Your Digital Front Door: A Simple Intro to Network Security</h1>
+            <p><strong>Published:</strong> June 16, 2025</p>
+            <p>
+                Think about your home. You have a front door with a lock, windows that latch shut, and maybe even an alarm system. You do all this to protect yourself and your belongings. Network security is the exact same idea, but for your digital life. 
+            </p>
+            <p>
+                In simple terms, <strong>network security is about protecting your digital devices and the information on them from being accessed by people who shouldn't have it.</strong>
+            </p>
+            <p>
+                This might sound complicated, but the basic ideas are surprisingly simple. Let's break it down.
+
+            </p>
+        </section>
+        <section class="blog-section">
+            <h2>📌 First, What Is a Network?</h2>
+            <p>
+                You're on a network right now! A network is just a group of connected devices that can share information. Your home Wi-Fi is a small network connecting your phone, laptop, and smart TV. The internet is a giant, worldwide network connecting billions of devices.
+            </p>
+
+            <p>
+                Because these devices are connected, they can be vulnerable. Just like a road connects your house to the rest of the world, a network connects your computer to the rest of the world—including the bad guys.
+            </p>
+        </section>
+        <!-- Blog Footer -->
+        <section class="blog-section">
+            <h2>🚨 The "Bad Guys": Common Digital Threats</h2>
+            <p>
+                Here are a few common threats you're protecting against:
+
+            </p>
+            <ol>
+                <li><strong>Viruses & Malware:</strong> Think of these as digital germs. They are bad programs that can get onto your computer to steal information, slow down your device, or lock you out of your files.</li>
+                <li><strong>Phishing:</strong> This is a trick. An attacker sends you an email or message that looks like it's from a trusted company (like your bank or Amazon) to fool you into giving them your password or credit card number.</li>
+                <li><strong>Unauthorized Access:</strong> This is when someone gets into your network or device without permission. It could be a neighbor using your Wi-Fi to slow it down, or a serious hacker trying to access your company's private files.</li>
+            </ol>
+        </section>
+        <section class="blog-section">
+            <h2>🎯 How We Protect Our Digital House: The Tools of Security</h2>
+            <p>
+                Just like you have locks and alarms for your house, we have tools to protect our networks. Here are the most important ones.
+            </p>
+            <h3>
+                1. The Firewall: Your Digital Bouncer
+            </h3>
+            <p>
+                A firewall is like a bouncer at a club or a guard at a gate. It stands between your computer and the internet, inspecting all the data coming in and out. It follows a set of rules to block anything that looks suspicious or dangerous.
+            </p>
+            <div class="example">
+                <p>
+                    <strong>Example:</strong> Your home Wi-Fi router has a built-in firewall. It automatically blocks random connection requests from the internet, preventing hackers from "knocking on the door" of your computer directly. You don't even see it working, but it's one of your most important lines of defense.
+                </p>
+            </div>
+            <h3>
+                2. Authentication: The Keys to the Door
+            </h3>
+            <p>
+                Authentication is the process of proving you are who you say you are. The most common form of authentication is a password.
+            </p>
+            <p>
+                A strong password is like a complex, unique key that no one else can guess. A better form of security is <strong>Two-Factor Authentication (2FA)</strong>, which is like needing your key AND a secret code that gets sent to your phone. This makes it much harder for someone to get in, even if they steal your password.
+            </p>
+            <div class="example">
+                <p>
+                    <strong>Example:</strong> When you log into your email, you enter your password (first factor). Then, you get a text message with a 6-digit code you have to enter (second factor). That's 2FA in action!
+                </p>
+            </div>
+            <h3>
+                3. Encryption: The Secret Language
+            </h3>
+            <p>
+                What if someone manages to intercept your information as it travels across the network? That's where encryption comes in. Encryption scrambles your data into an unreadable code. Only the person with the correct "key" can unscramble it.
+            </p>
+            <div class="example">
+                <p>
+                    <strong>Example:</strong> When you visit a secure website to buy something, you see <code>https://</code> and a lock icon in your browser's address bar. The 'S' stands for 'Secure'. This means your connection is encrypted. Your credit card number is turned into gibberish as it travels from your computer to the store's server, so no one can steal it along the way.
+                </p>
+            </div>
+
+            <h3>
+                4. Antivirus Software: The Alarm System
+            </h3>
+            <p>
+                Sometimes, a bad file might get past your firewall. An antivirus program acts like a security alarm inside your house. It constantly scans your computer for known viruses and malware and removes them if it finds any.
+            </p>
+            <div class="example">
+                <p><strong>Example:</strong> Software like Windows Defender, Avast, or Norton are antivirus programs. It's crucial to keep them updated so they can recognize the latest threats.</p>
+            </div>
+        </section>
+
+        <section class="blog-section">
+            <h2>🛠️ Use Cases</h2>
+            <ul>
+                <li>👨‍💻 Developers verifying clean environments</li>
+                <li>🏫 Students learning about networking and system internals</li>
+                <li>🔒 Security-conscious users reviewing unknown connections</li>
+                <li>🧪 Pentesters doing fast reconnaissance without deep packet inspection</li>
+            </ul>
+        </section>
+
+        <section class="blog-section">
+            <h2>Putting It All Together</h2>
+            <p>
+                Network security isn't about one single tool; it’s about using layers of protection.
+            </p>
+            <p>
+                Think about it: to get into a secure building, a thief might have to get past a gate (<strong>Firewall</strong>), show an ID to a guard (<strong>Authentication</strong>), and even then, all the important documents are locked in a safe (<strong>Encryption</strong>). 
+            </p>
+            <p>
+                Your digital life is the same. By using these tools together, you create a strong defense that keeps your information safe.
+            </p>
+
+            <p>
+                You don't need to be an expert to be secure. Start by using strong, unique passwords, enabling 2FA wherever you can, and making sure your devices are updated. These small steps make a huge difference in protecting your digital front door.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Saurabh Giri. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/_holy_smok3s_/"><i class="fab fa-instagram"></i></a> |
+            <a href="https://www.linkedin.com/in/saurabh-giri-ba172215b/"><i class="fab fa-linkedin"></i></a> |
+            <a href="https://x.com/holy_smok3s?s=20"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script src="rouge.js"></script>
+</body>
+
+</html>

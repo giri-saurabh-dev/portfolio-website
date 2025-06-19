@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Saurabh's Articles</title>
+
+    <link rel="stylesheet" href="article.css">
+    <link rel="icon" type="image/x-icon" href="/asset/img/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Rouge IP addresses Identifier which uses real time data to compare the suspicious ip.">
+    <meta name="keywords"
+        content="Cybersecurity, Ethical Hacking, netstat, Penetration Testing, ip address, rouge-ip-identifier, rouge-ip">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Articles</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/index.html#background">Background</a>
+            <a href="/index.html#projects">Projects</a>
+            <a href="/index.html#contact">Contact</a>
+            <a href="/blogs/blogs.html">Articles</a>
+
+        </div>
+    </nav>
+
+    <main class="container">
+        <img class="blog-image" src="/asset/blog-img/coding.jpg" alt="IP Address Illustration" />
+        <!-- Blog Header -->
+        <section class="blog-section">
+            <h1>Inside My Rogue IP</h1>
+            <p><strong>Published:</strong> June 17, 2025</p>
+            <p>
+                Ever wondered how sneaky cyber threats try to slip through the cracks? Well, I did too—and that curiosity led me to build my very own rogue IP detector. It's my digital watchdog, sniffing out suspicious activity and keeping things secure. 
+            </p>
+            <p>
+                In this blog, I’ll share how it works, the little challenges along the way, and some cool insights from the journey. Whether you're a tech enthusiast or just curious about keeping your online space safe, you’re in for an interesting ride!
+            </p>
+        </section>
+        <section class="blog-section">
+            <h2>🚨 The Problem: Unknown Connections</h2>
+            <p>
+                Ever run <code>netstat</code> and see dozens of foreign IP addresses connected to your system — and wonder, "Who are you, and why are you talking to my laptop?"
+            </p>
+
+            <p>
+                Most users:
+            </p>
+            <ol>
+                <li><strong>Don’t know what those IPs are</strong></li>
+                <li><strong>Can’t tell if they’re safe</strong></li>
+                <li><strong>Don’t have time to Google each one</strong></li>
+            </ol>
+            <p>
+                That’s where this project began.
+            </p>
+        </section>
+        <!-- Blog Footer -->
+        <section class="blog-section">
+            <h2>🧰 The Solution: A Browser-Based IP Inspector</h2>
+            <p>
+                I created a pure HTML + JS web app that:
+            </p>
+            <ol>
+                <li>Parses a <code>.txt</code> file from <code>netstat -ano > netstat.txt</code></li>
+                <li>Cross-references the IPs against Microsoft’s official IP ranges</li>
+                <li>Highlights rogue IPs in red, and safe ones in green</li>
+                <li><strong>(Bonus): Fetches Geo-IP info using <code>ipinfo.io</code> for each suspicious IP</strong></li>
+            </ol>
+        </section>
+        <section class="blog-section">
+            <h2>🛠️ How It Works</h2>
+            <h3>
+                1. User Uploads <code>netstat.txt</code>
+            </h3>
+            <p>
+                The browser reads the file using the <code>FileReader</code> API — no backend needed.
+            </p>
+            <h3>
+                2. IP Extraction
+            </h3>
+            <p>
+                It uses regex to parse each line and grab the foreign IP (not the local one), like:
+            </p>
+            <img class="blog-image" src="/asset/blog-img/ip-extraction.png" alt="IP Address Illustration" />
+
+            <h3>
+                3. Safe IP Comparison
+            </h3>
+            <p>
+                It fetches Microsoft’s list of legit IPs, either:
+            </p>
+            <ol>
+                <li>Live from their endpoint API (using a proxy to avoid CORS)</li>
+                <li>Or from a local <code>legit_ips.json</code> file</li>
+            </ol>
+            <p>
+                It flattens all CIDRs to raw IPs and compares:
+            </p>
+            <img class="blog-image" src="/asset/blog-img/ip-extraction.png" alt="IP Address Illustration" />
+
+            <h3>
+                4. Highlight and Explain
+            </h3>
+            <p>
+                Each IP is shown in a responsive table:
+            </p>
+            <ol>
+                <li>✅ Green for Microsoft IPs</li>
+                <li>🚨 Red for unknowns</li>
+                <li>With optional <code>ipinfo.io</code> lookups showing ISP, country, and org</li>
+            </ol>
+        </section>
+
+        <section class="blog-section">
+            <h2>💡 Why This Project Matters</h2>
+            <ol>
+                <li><strong>Quick visibility</strong> into who’s connected</li>
+                <li>A beginner-friendly take on <strong>network monitoring</strong></li>
+                <li>Fully local — no files uploaded, no data shared</li>
+                <li>100% browser-based, GitHub Pages–friendly</li>
+            </ol>
+        </section>
+
+        <section class="blog-section">
+            <h2>📎 What I Learned</h2>
+            <ol>
+                <li>Efficient IP parsing with JavaScript</li>
+                <li>Responsive UI design for real data display</li>
+                <li>CORS, proxies, and the limits of client-side APIs</li>
+                <li>Real-world use of <code>netstat</code> for cybersecurity</li>
+            </ol>
+        </section>
+
+        <section class="blog-section">
+            <h2>✅ Try It Yourself</h2>
+            <p>
+                Run this in CMD or PowerShell:
+            </p>
+            <img class="blog-image" src="/asset/blog-img/try.png" alt="IP Address Illustration" />
+            <p>
+                Then upload the file to the tool — and find out who your system is quietly talking to 👀
+            </p>
+        </section>
+
+        <section class="blog-section">
+            <h2>🧠 Final Thoughts</h2>
+            <p>
+                This app started as a simple netstat parser, but it became something far more useful: a quick and easy tool to stay informed about your device's digital behavior.
+            </p>
+            <p>
+                Whether you're a developer, student, or just curious — knowing your connections is power.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Saurabh Giri. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/_holy_smok3s_/"><i class="fab fa-instagram"></i></a> |
+            <a href="https://www.linkedin.com/in/saurabh-giri-ba172215b/"><i class="fab fa-linkedin"></i></a> |
+            <a href="https://x.com/holy_smok3s?s=20"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script src="rouge.js"></script>
+</body>
+
+</html>
