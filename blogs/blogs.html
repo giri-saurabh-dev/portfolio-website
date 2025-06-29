@@ -2,107 +2,86 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Saurabh's Articles</title>
+  <meta charset="UTF-8">
+  <title>Saurabh's Articles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="blogs.css">
-    <link rel="icon" type="image/x-icon" href="/asset/img/favicon.ico">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&family=Open+Sans&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- SEO -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="blogs.css">
+  <link rel="icon" type="image/x-icon" href="/asset/img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
-    <nav>
-        <div class="logo">Articles</div>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        <div class="nav-links">
-            <a href="/index.html">Home</a>
-            <a href="/index.html#background">Background</a>
-            <a href="/index.html#projects">Projects</a>
-            <a href="/index.html#contact">Contact</a>
-            <a href="/blogs/blogs.html">Articles</a>
+  <nav>
+    <div class="logo">Articles</div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+    <div class="menu-container">
+      <div class="nav-links">
+        <a href="/index.html">Home</a>
+        <a href="/index.html#background">Background</a>
+        <a href="/index.html#projects">Projects</a>
+        <a href="/index.html#contact">Contact</a>
+        <a href="/blogs/blogs.html">Articles</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="blog-grid">
+      <a href="articles/article-1.html" class="blog-card">
+        <img src="/asset/blog-img/intro-sec.jpg" alt="Post 1">
+        <div class="card-content">
+          <h3>Intro to Network Security</h3>
+          <p>Learn the basics of how systems communicate and what you can do to protect your endpoints.</p>
         </div>
-    </nav>
+      </a>
 
-    <main class="container">
-        <section class="blog-grid">
-            <a href="articles/article-1.html" class="blog-card">
-                <img src="/asset/blog-img/intro-sec.jpg" alt="Post 1">
-                <div class="card-content">
-                    <h3>Intro to Network Security</h3>
-                    <p>Learn the basics of how systems communicate and what you can do to protect your endpoints.</p>
-                </div>
-            </a>
-
-            <a href="articles/article-2.html" class="blog-card">
-                <img src="/asset/blog-img/coding.jpg" alt="Post 2">
-                <div class="card-content">
-                    <h3>Inside My Rogue IP Detector</h3>
-                    <p>A walkthrough of the tool I built to identify unknown IPs connected to your system.</p>
-                </div>
-            </a>
-
-            <a href="articles/article-3.html" class="blog-card">
-                <img src="/asset/blog-img/terminal.png" alt="Post 3">
-                <div class="card-content">
-                    <h3>Terminal Commands Every Dev Should Know</h3>
-                    <p>A cheat sheet of useful terminal commands that will level up your daily dev workflow.</p>
-                </div>
-            </a>
-
-            <a href="articles/article-4.html" class="blog-card">
-                <img src="/asset/blog-img/ceh.jpg" alt="Post 4">
-                <div class="card-content">
-                    <h3> My CEH Training Journey</h3>
-                    <p>How I dove into ethical hacking, what I learned, and where I’m headed
-                    </p>
-                </div>
-            </a>
-
-            <a href="articles/article-5.html" class="blog-card">
-                <img src="/asset/blog-img/github-pages.jpg" alt="Post 4">
-                <div class="card-content">
-                    <h3>Using GitHub Pages for Your Projects</h3>
-                    <p>Host your static sites and portfolios for free with GitHub Pages — it’s easier than you think.
-                    </p>
-                </div>
-            </a>
-            <!-- <a href="articles/article-5.html" class="blog-card">
-                <img src="/asset/blog-img/github-pages.jpg" alt="Post 4">
-                <div class="card-content">
-                    <h3>article</h3>
-                    <p>lorem ipsum
-                    </p>
-                </div>
-            </a>
-            <a href="articles/article-5.html" class="blog-card">
-                <img src="/asset/blog-img/github-pages.jpg" alt="Post 4">
-                <div class="card-content">
-                    <h3>article</h3>
-                    <p>lorem ipsum
-                    </p>
-                </div>
-            </a> -->
-        </section>
-
-
-    </main>
-
-    <footer>
-        <p>© 2025 Saurabh Giri. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://www.instagram.com/_holy_smok3s_/"><i class="fab fa-instagram"></i></a> |
-            <a href="https://www.linkedin.com/in/saurabh-giri-ba172215b/"><i class="fab fa-linkedin"></i></a> |
-            <a href="https://x.com/holy_smok3s?s=20"><i class="fab fa-twitter"></i></a>
+      <a href="articles/article-2.html" class="blog-card">
+        <img src="/asset/blog-img/coding.jpg" alt="Post 2">
+        <div class="card-content">
+          <h3>Inside My Rogue IP Detector</h3>
+          <p>A walkthrough of the tool I built to identify unknown IPs connected to your system.</p>
         </div>
-    </footer>
-    <script src="rouge.js"></script>
+      </a>
+
+      <a href="articles/article-3.html" class="blog-card">
+        <img src="/asset/blog-img/terminal.png" alt="Post 3">
+        <div class="card-content">
+          <h3>Terminal Commands Every Dev Should Know</h3>
+          <p>A cheat sheet of useful terminal commands that will level up your daily dev workflow.</p>
+        </div>
+      </a>
+
+      <a href="articles/article-4.html" class="blog-card">
+        <img src="/asset/blog-img/ceh.jpg" alt="Post 4">
+        <div class="card-content">
+          <h3>My CEH Training Journey</h3>
+          <p>How I dove into ethical hacking, what I learned, and where I’m headed</p>
+        </div>
+      </a>
+
+      <a href="articles/article-5.html" class="blog-card">
+        <img src="/asset/blog-img/github-pages.jpg" alt="Post 5">
+        <div class="card-content">
+          <h3>Using GitHub Pages for Your Projects</h3>
+          <p>Host your static sites and portfolios for free with GitHub Pages — it’s easier than you think.</p>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Saurabh Giri. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/_holy_smok3s_/"><i class="fab fa-instagram"></i></a> |
+      <a href="https://www.linkedin.com/in/saurabh-giri-ba172215b/"><i class="fab fa-linkedin"></i></a> |
+      <a href="https://x.com/holy_smok3s?s=20"><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+
 </body>
 
 </html>
