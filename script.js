@@ -91,12 +91,13 @@ document.querySelectorAll('.skill-card').forEach(card => {
         const descriptions = {
             'Network Config & Sec': 'Managing network security protocols, configuring network devices, and overseeing IDS/IPS systems',
             'Penetration Testing': 'Performing security assessments and identifying vulnerabilities across systems and networks.',
-            'Security Framework': 'Understanding encryption algorithms, secure communication protocols, and key management. Proficient in ISO/IEC, NIST, GDPR, HIPAA security frameworks',
+            'Security Hardening': 'Understanding encryption algorithms, secure communication protocols, and key management. Proficient in ISO/IEC, NIST, GDPR, HIPAA security frameworks',
             'Operating Systems': 'Installing, configuring, and troubleshooting various operating systems (Windows, Linux, macOS).',
             'Troubleshoot': 'Skilled in diagnosing and resolving hardware and software issues within the network.',
             'Forensics': 'Experienced in digital forensics, incident response, and root cause analysis (RCA).',
             'Coding': 'Knowledgeable in multiple programming languages including Python, JavaScript, and C#.',
-            'Scripting': 'Experienced in writing and utilizing scripts for automation and tasks.'
+            'Scripting': 'Experienced in writing and utilizing scripts for automation and tasks.',
+            'Information Security (INFOSEC)': 'Skilled in identifying, mitigating, and preventing security threats to ensure the confidentiality, integrity, and availability of information systems.'
         };
 
         modalTitle.textContent = skillTitle;
