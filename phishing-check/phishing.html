@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Phishing Check - SG</title>
+
+    <link rel="stylesheet" href="phishing.css">
+    <link rel="icon" type="image/x-icon" href="/asset/img/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Check if a URL or QR code is safe or malicious using real-time threat detection. Stay protected from phishing and scams.">
+    <meta name="keywords" content="Phishing detector, URL scanner, QR code security, malware checker, cybersecurity">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Saurabh Giri</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="nav-links">
+            <a href="/index.html">Home</a>
+            <a href="/index.html#background">Background</a>
+            <a href="/index.html#projects">Projects</a>
+            <a href="/index.html#contact">Contact</a>
+            <a href="/blogs/blogs.html">Articles</a>
+        </div>
+    </nav>
+    <main class="container">
+        <img class="blog-image" src="/asset/img/pexels-brett-sayles-1624895.jpg" alt="IP Address Illustration" />
+        <!-- Blog Header -->
+        <section class="blog-section">
+            <h1>Phishing Checker</h1>
+            <p><strong>Published:</strong> June 30, 2025</p>
+            <p>
+                In an age where every click could be a trap, I built a lightweight tool to help users check if a link—or
+                even a QR code—might be malicious. This Phishing Checker leverages Google Safe Browsing's
+                threat-detection API to scan URLs in real time.
+            </p>
+            <p>
+                Whether you paste a link or upload a QR code image, the app extracts the embedded URL and scans it for
+                known threats like malware, phishing scams, and social engineering tactics. It’s fully frontend-based
+                and hosted on GitHub Pages, making it fast, lightweight, and private—no data logging, just clean checks.
+            </p>
+        </section>
+
+        <!-- App Section -->
+        <section class="app-section">
+            <h2>Check a Link or QR Code</h2>
+            <div class="phishing-checker">
+                <input type="text" id="urlInput" placeholder="Paste a URL here" />
+                <button onclick="checkURL()">Check URL</button>
+
+                <p style="margin-top: 1em;">or scan a QR code</p>
+                <input type="file" accept="image/*" onchange="handleImage(this)" />
+
+                <div id="result" class="result-box"></div>
+            </div>
+        </section>
+
+        <section class="blog-section">
+            <h1>🧾 Final Thoughts</h1>
+            <p>
+                The web’s full of wonders—and threats. This phishing checker is my tiny contribution toward a safer
+                digital world. If it helps even one person dodge a shady link, that’s a win in my book.
+            </p>
+            <p>
+                Thanks for stopping by. Stay sharp, stay safe.
+            </p>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>© 2025 Saurabh Giri. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/_holy_smok3s_/"><i class="fab fa-instagram"></i></a> |
+            <a href="https://www.linkedin.com/in/saurabh-giri-ba172215b/"><i class="fab fa-linkedin"></i></a> |
+            <a href="https://x.com/holy_smok3s?s=20"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script src="phishing.js"></script>
+</body>
+
+</html>
