@@ -1,0 +1,278 @@
+:root {
+    --bg: #000000;
+    --surface: #0b0b0b;
+    --border: rgba(255, 255, 255, 0.08);
+    --accent: #4c82ff;
+    --text: #ffffff;
+    --text-dim: #888888;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* --- Hero Section --- */
+.hero-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 50% 50%, #111 0%, #000 100%);
+    perspective: 1200px;
+}
+
+.glass-window {
+    width: 80%;
+    max-width: 900px;
+    height: 500px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+    /* MODIFIED: We only animate opacity and a slight scale here */
+    opacity: 0;
+    animation: window-entry 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    
+    /* Keep this for smooth JS transitions */
+    transition: transform 0.1s ease-out, opacity 1s ease-out; 
+}
+
+.window-header {
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--text-dim);
+}
+
+.window-content {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.window-content > * {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: content-fade 0.5s ease forwards;
+}
+
+/* Staggered loading for window elements */
+.window-content .badge { animation-delay: 0.4s; }
+.window-content h1 { animation-delay: 0.6s; }
+.window-content .hero-subtext { animation-delay: 0.8s; }
+.window-content .cta-button { animation-delay: 1s; }
+
+/* --- UI Elements --- */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    background: rgba(76, 130, 255, 0.1);
+    border: 1px solid var(--accent);
+    border-radius: 100px;
+    font-size: 10px;
+    color: var(--accent);
+    margin-bottom: 24px;
+    width: fit-content;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: -3px;
+}
+
+.blinking-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 0.9em;
+    background: var(--accent);
+    margin-left: 8px;
+    animation: blink 1s step-end infinite;
+}
+
+.cta-button {
+    margin-top: 40px;
+    background: #fff;
+    color: #000;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    transition: 0.3s;
+    z-index: 2; /* Keep button above spotlight */
+}
+
+.cta-button:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* --- Bento Grid --- */
+.bento-grid {
+    padding: 0 10vw 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.bento-item {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 30px;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden; /* Clips the spotlight glow */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bento-item:hover {
+    border-color: var(--accent);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* The Spotlight Glow */
+.bento-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        400px circle at var(--mouse-x) var(--mouse-y), 
+        rgba(76, 130, 255, 0.12), 
+        transparent 80%
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.bento-item:hover::before {
+    opacity: 1;
+}
+
+.bento-item i {
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.capabilities {
+    padding: 120px 20px;
+}
+
+.capabilities-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.capability-card {
+    padding: 40px;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.02);
+    transition: all 0.3s ease;
+}
+
+.capability-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.capability-card h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.capability-card h3::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--accent);
+}
+
+.capability-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.capability-card li {
+    margin-bottom: 10px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.8);
+}
+
+
+/* --- Keyframes --- */
+@keyframes blink { 50% { opacity: 0; } }
+
+@keyframes window-entry {
+    from {
+        opacity: 0;
+        filter: brightness(0.5);
+    }
+    to {
+        opacity: 1;
+        filter: brightness(1);
+    }
+}
+
+@keyframes content-fade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 1024px) {
+    .bento-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+    .bento-grid { grid-template-columns: 1fr; padding: 0 5vw 60px; }
+    .glass-window { width: 95%; height: auto; }
+    .window-content { padding: 40px 20px; }
+    h1 { letter-spacing: -1px; }
+}
